@@ -6,6 +6,7 @@ export default function Login() {
         <Header />
             <main>
                 <h1>Login</h1>
+                <LoginForm />
             </main>
         </>
     );
