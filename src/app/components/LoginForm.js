@@ -11,7 +11,7 @@ const LoginForm = () => {
                 <label htmlFor="pass">Password</label>
                 <input type="password" name="pass" />
 
-                <button type="submit">Create User</button>
+                <button type="submit">Login</button>
             </form>
         </div>
     );
