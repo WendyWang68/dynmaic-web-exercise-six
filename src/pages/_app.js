@@ -18,24 +18,20 @@ export default function MyApp({ Component, pageProps }){
     const [error, setError] = useState(null);
 
     const createUser = useCallback((e) => {
-        //create account in auth
-        //add user info in firebase datastore
-        e.preventDefault(); //saying do not use default html form 
-        //assign email and to varaibels from form
+        e.preventDefault(); 
         const email = e.currentTarget.email.value;
         const password = e.currentTarget.password.value;
 
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
-            //succeeced to then
             .then((userCredential) => {
-                const user = userCredential.user; //this is a value i 
-                setIsLoggedIn(true); //since the user is true, set logged in
+                const user = userCredential.user; 
+                setIsLoggedIn(true); 
                 setUserInformation(user);
                 setError(null);
 
             })
-            //fail to catch
+       
             .catch((error) => {
                 const errorCode = error.errorCode
                 const errorMessage = error.message;

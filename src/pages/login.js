@@ -9,9 +9,11 @@ export default function Login({isLoggedIn, loginUser}) {
     }, [isLoggedIn])
 
     return(
+        <>
         <main>
-                <h1>Login</h1>
-                <LoginForm loginUser={loginUser}/>
+            <h1>Login</h1>
+            <LoginForm loginUser={loginUser}/>
         </main>
+        </>
     );
 }
